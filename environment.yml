@@ -1,0 +1,15 @@
+echo "name: spotify_analysis
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.9
+  - jupyter
+  - pandas
+  - matplotlib
+  - seaborn
+  - sqlite
+  - pip
+  - pip:
+    - spotipy
+    - python-dotenv" > environment.yml

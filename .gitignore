@@ -1,0 +1,16 @@
+echo "# Ignore environment variables and API keys
+.env
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore the database file (optional, depending on your needs)
+# data/spotify_tracks.db
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db" > .gitignore
