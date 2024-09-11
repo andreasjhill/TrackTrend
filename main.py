@@ -1,7 +1,6 @@
 from pathlib import Path
-from src.spotify_api import get_top_50_tracks
+from src.spotify_api import get_spotify_client, get_top_50_tracks
 from src.database import init_db, insert_tracks, prepare_tracks_data
-from src.analysis import analyze_top_tracks
 
 def main():
     # Set up paths
@@ -13,8 +12,11 @@ def main():
     print("Initializing database...")
     init_db(db_path)
     
+    print("Setting up Spotify client...")
+    sp = get_spotify_client()
+    
     print("Fetching top 50 tracks...")
-    top_tracks = get_top_50_tracks()
+    top_tracks = get_top_50_tracks(sp)
     
     print("Preparing data for insertion...")
     tracks_data = prepare_tracks_data(top_tracks)
@@ -23,9 +25,7 @@ def main():
     insert_tracks(tracks_data, db_path)
     
     print("Data update completed successfully.")
-    
-    print("Analyzing tracks...")
-    analyze_top_tracks()
+    print("Run your notebook to process the data and update the CSV for Tableau.")
 
 if __name__ == "__main__":
     main()
