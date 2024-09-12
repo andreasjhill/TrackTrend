@@ -1,9 +1,12 @@
 # TrackTrend
 <img width="1721" alt="Screenshot 2024-09-10 at 8 25 11 PM" src="https://github.com/user-attachments/assets/3c263642-73ca-4801-b7d4-1bbee09c7816">
-
-TrackTrend offers valuable insights that can inform marketing strategies, playlist curation, and more. Dive into the rhythm of the music industry and discover the trends that shape our soundscape with TrackTrend.
-
 This project analyzes the Spotify Global Top 50 playlist, including data collection, processing, and visualization using Jupyter notebooks.
+
+Insights uncovered: 
+
+* Songs ranging from 2.8 - 3 minutes in length account for 42.4% of the top 50 indicating a popularity-time efficiency.
+* Songs with higher danceability and energy scores tend to rank higher.
+* Direct corelation between danceability and popularity
 
 ## Setup
 
